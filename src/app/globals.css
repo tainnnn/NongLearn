@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*::-webkit-scrollbar{
+    display: none;
+}*/
+
+pre code {
+    background-color: #334155;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+pre {
+  font-size: calc(0.8rem + 0.5vw);
+  color: #fff;
+  border-radius: 10px;
+}
