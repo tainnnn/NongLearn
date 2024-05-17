@@ -14,7 +14,6 @@ function Cpage15() {
 
   useEffect(() => {
     if (!session) router.replace('/')
-    if (session) router.replace("/c15");
   }, [session, router])
 
   const handleNavigation = (page) => {

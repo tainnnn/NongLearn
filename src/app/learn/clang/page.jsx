@@ -16,7 +16,6 @@ function Clang() {
 
   useEffect(() => {
     if (!session) router.replace('/')
-    if (session) router.replace('/')
   }, [session, router])
     
   const handleNavigation = (page) => {
