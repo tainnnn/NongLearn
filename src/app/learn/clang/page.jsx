@@ -15,7 +15,7 @@ function Clang() {
   const router = useRouter();
 
   useEffect(() => {
-    if (session) router.replace("/c16");
+    if (session) router.replace("/main");
   }, [session, router])
     
   const handleNavigation = (page) => {
