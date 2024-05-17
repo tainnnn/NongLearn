@@ -17,7 +17,6 @@ function MainPage() {
   console.log(session)
   
   if (!session) router.replace("/")
-  if (session) router.replace("/main")
 
   return (
     <div className='bg-slate-600 min-h-screen'>
