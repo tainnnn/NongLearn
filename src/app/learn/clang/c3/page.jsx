@@ -15,6 +15,7 @@ function Cpage3() {
   const router = useRouter();
 
   useEffect(() => {
+    if (!session) router.replace('/')
     if (session) router.replace("/c3");
   }, [session, router])
 

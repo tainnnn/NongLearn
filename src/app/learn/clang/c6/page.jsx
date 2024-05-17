@@ -15,6 +15,7 @@ function Cpage6() {
   const router = useRouter();
 
   useEffect(() => {
+    if (!session) router.replace('/')
     if (session) router.replace("/c6");
   }, [session, router])
 
