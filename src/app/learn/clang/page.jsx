@@ -11,12 +11,13 @@ import Link from 'next/link'
 
 function Clang() {
 
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const router = useRouter();
 
   useEffect(() => {
-    if (!session) router.replace('/')
-  }, [session, router])
+    if (status === 'loading') return
+    if (!session && status !== 'loading') router.replace('/')
+  }, [session, status, router]);
     
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
