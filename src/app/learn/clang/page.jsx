@@ -17,6 +17,7 @@ function Clang() {
   useEffect(() => {
     if (status === 'loading') return
     if (!session && status !== 'loading') router.replace('/')
+    if (session) router.replace("/clang");
   }, [session, status, router]);
     
   const handleNavigation = (page) => {
