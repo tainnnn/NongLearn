@@ -12,15 +12,8 @@ import Link from 'next/link'
 
 function Clang() {
 
-  const router = useRouter();
-
   const { data: session } = useSession();
-
-  useEffect(() => {
-    if (!session) {
-      router.push("")
-    }
-  }, [session, router]);
+  if (!session) redirect("/login");
 
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
