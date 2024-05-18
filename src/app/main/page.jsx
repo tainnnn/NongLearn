@@ -29,9 +29,7 @@ function MainPage() {
             <p>C เป็นภาษาโปรแกรมระดับสูงที่พัฒนาขึ้นในช่วงต้นทศวรรษ 1970 โดย Dennis Ritchie ที่ Bell Labs</p>
             <div className="card-actions justify-end">
               <Link href="/learn/clang">
-                <a className="btn btn-primary">
-                <button className="btn btn-primary">Let's go</button>
-                </a>
+                <a className="btn btn-primary">Let's go</a>
               </Link>
             </div>
           </div>
