@@ -6,12 +6,21 @@ import Contentbar from '@/app/components/Contentbar';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react'
 import { redirect } from 'next/navigation';
+import { useEffect } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 
 function Clang() {
 
+  const router = useRouter();
+
   const { data: session } = useSession();
+
+  useEffect(() => {
+    if (!session) {
+      router.push("")
+    }
+  }, [session, router]);
 
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
