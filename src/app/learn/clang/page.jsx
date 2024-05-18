@@ -16,8 +16,10 @@ function Clang() {
   const router = useRouter();
 
   useEffect(() => {
-    if (!session) router.replace('/')
-  }, [session, router])
+    if (!session && router.pathname !== '/clang') {
+      router.replace('/clang');
+    }
+  }, [session, router]);
 
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
