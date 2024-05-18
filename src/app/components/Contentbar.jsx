@@ -29,7 +29,7 @@ function Contentbar() {
         <ul className="menu w-30 md:w-48 lg:w-56 rounded-box bg-slate-800">
           <li>
             <h2 className="menu-title text-lg ml-3 text-slate-200">
-              <a href="/clang">ภาษา C</a>
+              <a onClick={() => handleNavigation('clang')}>ภาษา C</a>
             </h2>
             <ul>
               <li className='text-white'><a onClick={() => handleNavigation('c1')}>โครงสร้างเบื้องต้น</a></li>
