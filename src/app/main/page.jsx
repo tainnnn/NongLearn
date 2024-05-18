@@ -37,7 +37,7 @@ function MainPage() {
 
         <div className="card w-96 bg-base-100 shadow-xl image-full bg-slate-700">
           <figure className="my-8 w-full h-48 overflow-hidden">
-            <img src="/images/Python.png" alt="py" />
+            <img src="/images/Python.png" alt="p" />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-white">Python Language</h2>
