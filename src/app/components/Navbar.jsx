@@ -9,7 +9,7 @@ function Navbar({session}) {
   return (
   <div className="navbar bg-slate-800">
   <div className="flex-1">
-    <a href="/" className="btn btn-ghost text-xl">
+    <a href="/" className="btn btn-ghost text-xl text-white">
       <img alt="NongLearn Logo" src="/images/nonglearn.png" width={30} height={30}/>
       NongLearn
     </a>
