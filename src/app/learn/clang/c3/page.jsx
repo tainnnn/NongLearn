@@ -16,7 +16,7 @@ function Cpage3() {
   const router = useRouter();
 
   useEffect(() => {
-    if (!session) router.replace('/c3')
+    if (!session) router.replace('learn/clang/c3')
   }, [session, router])
 
   const handleNavigation = (page) => {
