@@ -5,20 +5,14 @@ import Navbar from '../../components/Navbar'
 import Contentbar from '@/app/components/Contentbar';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react'
-import { redirect } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 
 function Clang() {
 
-  const { data: session, status } = useSession();
-  const router = useRouter();
+  const { data: session } = useSession();
+    if (!session) redirect("/login");
 
-  useEffect(() => {
-    if (status === 'loading') return
-    if (!session && status !== 'loading') router.replace('/')
-  }, [session, status, router]);
-    
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
   };

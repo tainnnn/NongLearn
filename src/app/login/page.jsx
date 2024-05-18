@@ -13,12 +13,11 @@ import { useSession } from 'next-auth/react';
 
 function LoginPage() {
 
-  const { data: session } = useSession();
   const router = useRouter();
 
-  useEffect(() => {
-    if (session) router.replace("/main");
-  }, [session, router])
+  const { data: session } = useSession();
+  if (session) router.replace('/main');
+
   return (
     <div className='h-screen bg-slate-600'>
       <Navbar/>

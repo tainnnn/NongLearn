@@ -9,6 +9,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 function Cpage16() {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!session) router.replace('/')
+  }, [session, router])
 
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);

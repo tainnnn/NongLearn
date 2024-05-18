@@ -13,11 +13,7 @@ import styles from '@/app/styles/image.module.css'
 function MainPage() {
 
   const { data: session } = useSession();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (session) router.replace("/main");
-  }, [session, router])
+    if (!session) redirect("/login");
 
   return (
     <div className='bg-slate-600 min-h-screen'>
