@@ -27,13 +27,15 @@ function MainPage() {
           <div className="card-body">
             <h2 className="card-title text-white">C Language</h2>
             <p>C เป็นภาษาโปรแกรมระดับสูงที่พัฒนาขึ้นในช่วงต้นทศวรรษ 1970 โดย Dennis Ritchie ที่ Bell Labs</p>
-          <div className="card-actions justify-end">
-            <a href="/learn/clang">
-              <button className="btn btn-primary">Let's go</button>
-            </a>
+            <div className="card-actions justify-end">
+              <Link href="/learn/clang">
+                <a className="btn btn-primary">
+                <button className="btn btn-primary">Let's go</button>
+                </a>
+              </Link>
+            </div>
           </div>
           </div>
-        </div>
 
         <div className="card w-96 bg-base-100 shadow-xl image-full bg-slate-700">
           <figure className="my-8 w-full h-48 overflow-hidden">
