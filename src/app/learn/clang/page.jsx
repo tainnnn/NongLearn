@@ -17,7 +17,7 @@ function Clang() {
 
   useEffect(() => {
     if (!session && router.pathname !== '/clang') {
-      router.replace('/clang');
+      router.replace('learn/clang');
     }
   }, [session, router]);
 
