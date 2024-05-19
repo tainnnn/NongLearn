@@ -28,9 +28,7 @@ function Contentbar() {
       <div className={`flex items-start ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
         <ul className="menu w-30 md:w-48 lg:w-56 rounded-box bg-slate-800">
           <li>
-            <li className="menu-title text-lg ml-3 text-slate-200">
-              <a href='/'>ภาษา C</a>
-            </li>
+            <li className='text-white'><a onClick={() => handleNavigation('/')}>ภาษา C</a></li>
             <ul>
               <li className='text-white'><a onClick={() => handleNavigation('c1')}>โครงสร้างเบื้องต้น</a></li>
               <li className='text-white'><a onClick={() => handleNavigation('c2')}>คอมเมนต์</a></li>
