@@ -13,7 +13,7 @@ import styles from '@/app/styles/image.module.css'
 function MainPage() {
 
   const { data: session } = useSession();
-    if (!session) redirect("/login");
+  if (!session) redirect("/login");
 
   return (
     <div className='bg-slate-600 min-h-screen'>
