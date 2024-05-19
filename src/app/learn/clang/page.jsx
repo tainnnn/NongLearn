@@ -13,7 +13,7 @@ import Link from 'next/link'
 function Clang() {
 
   const { data: session } = useSession();
-  if (!session) redirect("/login");
+  if (!session) redirect("/clang");
 
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);

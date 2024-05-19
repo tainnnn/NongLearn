@@ -13,11 +13,7 @@ import Link from 'next/link'
 function Cpage5() {
 
   const { data: session } = useSession();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!session) router.replace('/c5')
-  }, [session, router])
+  if (!session) redirect("/c5");
   
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
