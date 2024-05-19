@@ -12,16 +12,17 @@ import Link from 'next/link'
 
 function Clang() {
 
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const router = useRouter();
 
   useEffect(() => {
+    if (status === 'loading') return;
     if (!session) {
       router.replace('/login');
     }
-  }, [session, router]);
+  }, [session, status, router]);
 
-  if (!session) {
+  if (status === 'loading' || !session) {
     return null;
   }
 
