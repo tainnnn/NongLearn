@@ -12,9 +12,15 @@ import Link from 'next/link'
 
 function Cpage6() {
 
-  const { data: session } = useSession();
-  if (!session) redirect("/c6");
+  const router = useRouter();
+  const { data: session, status } = useSession();
 
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.replace('/login')
+    }
+  }, [status, router]);
+  
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
   };

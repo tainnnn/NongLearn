@@ -11,8 +11,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 function Cpage13() {
-  const { data: session } = useSession();
-  if (!session) redirect("/c13");
+  const router = useRouter();
+  const { data: session, status } = useSession();
+
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.replace('/login')
+    }
+  }, [status, router]);
 
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
