@@ -10,7 +10,7 @@ function HeroSection() {
     <section className='grid grid-cols-1 lg:grid-cols-12 my-4'>
         <div className='col-span-7 place-self-center place-items-center grid lg:place-items-start'>
             <h1 className="text-white max-w-2xl mb-4 lg:text-6xl text-4xl font-extrabold">
-                <span className="text-white text-8xl bg-clip-text">
+                <span className="text-gradient-to-r from-emerald-400 to-cyan-400 text-8xl">
                     Hello{" "}
                 </span>{" "}
           <br />
