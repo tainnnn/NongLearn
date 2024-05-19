@@ -14,9 +14,12 @@ import { useSession } from 'next-auth/react';
 function LoginPage() {
 
   const router = useRouter();
-
   const { data: session } = useSession();
-  if (session) router.replace('/main');
+
+  if (session) {
+    router.replace('/main');
+    return null
+  }
 
   return (
     <div className='h-screen bg-slate-600'>

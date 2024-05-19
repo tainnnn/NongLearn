@@ -16,8 +16,14 @@ function Clang() {
   const router = useRouter();
 
   useEffect(() => {
-    if (!session) router.replace('')
-  }, [session, router])
+    if (!session) {
+      router.replace('/login');
+    }
+  }, [session, router]);
+
+  if (!session) {
+    return null;
+  }
 
   const handleNavigation = (page) => {
     router.push(`/learn/clang/${page}`);
