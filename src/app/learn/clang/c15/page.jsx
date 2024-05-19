@@ -5,6 +5,7 @@ import Navbar from '@/app/components/Navbar';
 import Contentbar from '@/app/components/Contentbar';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import { redirect } from 'next/navigation';
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
