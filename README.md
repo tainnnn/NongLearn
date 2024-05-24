@@ -1,3 +1,3 @@
-This project is about programming language that i want to remember
+This project is about programming languages that I want to remember
 <br>
-go to this website <a href="https://nonglearn.vercel.app/" target="_blank">
+Go to this website: <a href="https://nonglearn.vercel.app/" target="_blank">Nong Learn</a>
